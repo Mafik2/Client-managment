@@ -18,15 +18,13 @@ function user(data, clientCard) {
     </div>
   </ul>
 </div>
-`;
-        clientCard.appendChild(card)
-
-        let deleteBtn = card.querySelector("#deleteBtn")
+`;          let deleteBtn = card.querySelector("#deleteBtn")
         deleteBtn.addEventListener('click', deleteAction)
-
+        clientCard.appendChild(card)
         function deleteAction(){
             fetch('http://167.172.175.168/bd0b5881-e1bf-482a-8efb-99edc24e8976/Clients/' + data[i].id, {
                 method: 'DELETE'
+
             })
             window.location.reload();
         }
